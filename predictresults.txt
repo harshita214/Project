@@ -1,0 +1,62 @@
+1.
+
+root@52a23952069d:/home/workspace/ImageClassifier# python predict.py flowers/test/1/image_06743.jpg checkpoint.pth --gpu
+CUDA activated 
+Downloading: "https://download.pytorch.org/models/vgg13-c768596a.pth" to /root/.torch/models/vgg13-c768596a.pth
+100%|██████████████████████████████████████████████████████████████████████████████████████| 532194478/532194478 [00:06<00:00, 78849469.43it/s]
+Class number:
+['46', '89', '51', '73', '74']
+Probability (%):
+[2.59, 2.5, 2.39, 2.35, 2.31]
+
+
+root@52a23952069d:/home/workspace/ImageClassifier# python predict.py flowers/test/1/image_06743.jpg checkpoint.pth --category_names cat_to_name.json --top_k 10
+Class name:
+['wallflower', 'watercress', 'petunia', 'water lily', 'rose', 'frangipani', 'cyclamen', 'lotus lotus', 'hibiscus', 'sword lily']
+Class number:
+['46', '89', '51', '73', '74', '81', '88', '78', '83', '43']
+Probability (%):
+[2.59, 2.5, 2.39, 2.35, 2.31, 2.17, 1.89, 1.87, 1.72, 1.69]
+
+root@52a23952069d:/home/workspace/ImageClassifier# python predict.py flowers/test/1/image_06743.jpg checkpoint.pth --category_names cat_to_name.json --top_k 10 --gpu
+CUDA activated 
+Class name:
+['wallflower', 'watercress', 'petunia', 'water lily', 'rose', 'frangipani', 'cyclamen', 'lotus lotus', 'hibiscus', 'sword lily']
+Class number:
+['46', '89', '51', '73', '74', '81', '88', '78', '83', '43']
+Probability (%):
+[2.59, 2.5, 2.39, 2.35, 2.31, 2.17, 1.89, 1.87, 1.72, 1.69]
+
+
+
+
+
+
+2.
+
+root@e8c0cba9d965:/home/workspace/ImageClassifier# python predict.py flowers/test/100/image_07896.jpg checkpoint.pth --gpu
+CUDA activated 
+Class number:
+['51', '46', '74', '73', '89']
+Probability (%):
+[2.91, 2.62, 2.42, 2.16, 2.1]
+
+
+
+root@52a23952069d:/home/workspace/ImageClassifier# python predict.py flowers/test/100/image_07896.jpg checkpoint.pth --category_names cat_to_name.json --top_k 10
+Class name:
+['wallflower', 'watercress', 'petunia', 'water lily', 'rose', 'frangipani', 'cyclamen', 'lotus lotus', 'hibiscus', 'sword lily']
+Class number:
+['46', '89', '51', '73', '74', '81', '88', '78', '83', '43']
+Probability (%):
+[2.59, 2.5, 2.39, 2.35, 2.31, 2.17, 1.89, 1.87, 1.72, 1.69]
+
+root@e8c0cba9d965:/home/workspace/ImageClassifier# python predict.py flowers/test/100/image_07896.jpg checkpoint.pth --category_names cat_to_name.json --top_k 10 --gpu
+CUDA activated 
+Class name:
+['petunia', 'wallflower', 'rose', 'water lily', 'watercress', 'cyclamen', 'lotus lotus', 'hibiscus', 'sword lily', 'bougainvillea']
+Class number:
+['51', '46', '74', '73', '89', '88', '78', '83', '43', '95']
+Probability (%):
+[2.91, 2.62, 2.42, 2.16, 2.1, 1.95, 1.94, 1.78, 1.75, 1.73]
+
